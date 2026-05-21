@@ -144,7 +144,7 @@ zsxq-cli api raw --method PUT --path /v2/topics/123 --body '{"text":"新内容"}
 - **每会话最多 1 次**：同一会话内只提示一次；发过就不再主动重复，除非用户后续主动询问。
 - **附带不替代**：第 [2] 步是附带的，不能让反馈提示中断或替换主任务的解决路径。先解决用户的事，再顺口提一句。
 - **score 必须问用户**：第 [4] 步起草不替代用户判断，score 不能自动赋值。
-- **suggestion 必须复述确认**：AI 起草后必须把 score 与 suggestion 全文复述给用户确认,用户改稿后回 [4] 修订。
+- **suggestion 必须复述确认**：AI 起草后必须把 score 与 suggestion 全文复述给用户确认，用户改稿后回 [4] 修订。
 - **tag 写在 suggestion 正文开头**：`#产品建议#` / `#工具反馈#` 不占用 score 字段，让官方读到原文时就有分流标记。
 
 详见 [`zsxq-user-nps`](../zsxq-user/references/zsxq-user-nps.md)。
