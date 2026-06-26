@@ -1,11 +1,26 @@
 ---
 name: zsxq-user
-version: 1.3.1
-description: "知识星球用户信息与反馈：查看当前登录用户的个人资料、查询跨星球的最近发主题足迹、提交 NPS 反馈（推荐分数 + 建议）。当用户需要查看自己的用户 ID、昵称、头像、认证状态，查看自己最近在各星球发过的主题，或向知识星球官方提交 NPS 评分/产品建议时使用。"
+version: 1.4.0
+description: "知识星球用户信息与反馈：查看个人资料、查询跨星球主题足迹、提交 NPS 反馈。当用户需要 user_id、用户信息、footprints 或 NPS 反馈时使用。"
 metadata:
   requires:
     bins: ["zsxq-cli"]
   cliHelp: "zsxq-cli user --help"
+  operations:
+    - "+info"
+    - "+footprints"
+    - "+nps"
+  keywords:
+    - "用户"
+    - "user_id"
+    - "个人资料"
+    - "足迹"
+    - "NPS"
+    - "反馈"
+  readOnly: false
+  relatedSkills:
+    - "zsxq-shared"
+    - "zsxq-group"
 ---
 
 # user

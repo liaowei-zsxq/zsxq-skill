@@ -69,7 +69,7 @@ zsxq-cli api call get_self_question_topics --params '{"topic_filter":"unanswered
 zsxq-cli api call get_self_answer_topics --params '{"topic_filter":"unanswered","count":20}'
 ```
 
-> `get_self_question_topics` / `get_self_answer_topics` 还支持 `topic_filter:"answered"` 查看已回答记录。
+> `get_self_question_topics` / `get_self_answer_topics` 还支持 `topic_filter:"answered"` 查看已回答记录，详见 [zsxq-topic-read](../SKILL.md) 的 API 表。
 
 ## 失败语义
 
@@ -87,5 +87,5 @@ zsxq-cli api call get_self_answer_topics --params '{"topic_filter":"unanswered",
 ## 参考
 
 - [zsxq-topic-reply](zsxq-topic-reply.md) — 发表普通评论（适用于所有类型）
-- [zsxq-topic-detail](zsxq-topic-detail.md) — 查看主题详情和类型
+- [zsxq-topic-detail](../../zsxq-topic-read/references/zsxq-topic-detail.md) — 查看主题详情和类型
 - [zsxq-shared](../../zsxq-shared/SKILL.md)

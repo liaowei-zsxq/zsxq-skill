@@ -58,7 +58,7 @@ zsxq-cli topic +detail --topic-id 111222333444 --json
 
 ## 说明
 
-- `+detail` 不含评论内容；如需评论列表，调用 `get_topic_comments`（见 zsxq-topic SKILL.md 的 API 表）
+- `+detail` 不含评论内容；如需评论列表，调用 `get_topic_comments`（见 [zsxq-topic-read](../SKILL.md) 的 API 表）
 
 ## 错误说明
 
@@ -66,7 +66,7 @@ zsxq-cli topic +detail --topic-id 111222333444 --json
 
 ## 参考
 
-- [zsxq-topic-reply](zsxq-topic-reply.md) — 对主题发表评论
-- [zsxq-topic-answer](zsxq-topic-answer.md) — 回答提问类主题
+- [zsxq-topic-reply](../../zsxq-topic-interact/references/zsxq-topic-reply.md) — 对主题发表评论
+- [zsxq-topic-answer](../../zsxq-topic-interact/references/zsxq-topic-answer.md) — 回答提问类主题
 - [zsxq-topic-search](zsxq-topic-search.md) — 搜索主题
 - [zsxq-shared](../../zsxq-shared/SKILL.md)

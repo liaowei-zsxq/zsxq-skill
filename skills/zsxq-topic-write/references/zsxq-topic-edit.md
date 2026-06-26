@@ -72,7 +72,7 @@ zsxq-cli topic +detail --topic-id 111222333444
 
 ## 参考
 
-- [zsxq-topic-detail](zsxq-topic-detail.md) — 编辑前确认主题内容
+- [zsxq-topic-detail](../../zsxq-topic-read/references/zsxq-topic-detail.md) — 编辑前确认主题内容
 - [zsxq-topic-create](zsxq-topic-create.md) — 发布新主题
 - [zsxq-topic-delete](zsxq-topic-delete.md) — 删除主题
 - [zsxq-shared](../../zsxq-shared/SKILL.md)

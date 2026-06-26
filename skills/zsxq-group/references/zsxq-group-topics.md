@@ -58,7 +58,7 @@ zsxq-cli group +topics --group-id 123456789 \
 
 ## 参考
 
-- [zsxq-topic-detail](../../zsxq-topic/references/zsxq-topic-detail.md) — 查看主题详情
-- [zsxq-topic-search](../../zsxq-topic/references/zsxq-topic-search.md) — 按关键词搜索主题
+- [zsxq-topic-detail](../../zsxq-topic-read/references/zsxq-topic-detail.md) — 查看主题详情
+- [zsxq-topic-search](../../zsxq-topic-read/references/zsxq-topic-search.md) — 按关键词搜索主题
 - [zsxq-group-hashtags](zsxq-group-hashtags.md) — 按标签筛选主题
 - [zsxq-shared](../../zsxq-shared/SKILL.md)

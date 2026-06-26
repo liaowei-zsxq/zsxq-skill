@@ -1,16 +1,50 @@
 ---
 name: zsxq-shared
-version: 1.3.1
-description: "知识星球 CLI 共享基础：认证登录（auth login/logout/status）、配置诊断（doctor/config show）、通用 API 调用规范（api list/api call/api raw 调用底层接口或原始 HTTP 接口）、星球与主题分享链接拼接（电脑端 / 手机端）、写入与删除操作的安全规则、常见错误码处理（401 token 过期、缺参数等）。当用户首次登录、退出登录、查看认证状态、调用 zsxq-cli api raw / api call、需要拼接知识星球分享链接，或遇到认证或 HTTP 错误时使用。"
+version: 1.4.0
+description: "知识星球 CLI 共享基础：登录认证、API 调用、链接拼接、安全规则、错误处理。当用户需要 auth login/logout/status、doctor、config show、api list/call/raw、拼分享链接，或遇到 401/403/404/参数错误时使用。"
 metadata:
   requires:
     bins: ["zsxq-cli"]
   cliHelp: "zsxq-cli auth --help"
+  operations:
+    - "auth login"
+    - "auth status"
+    - "auth logout"
+    - "doctor"
+    - "config show"
+    - "api list"
+    - "api call"
+    - "api raw"
+  keywords:
+    - "登录"
+    - "认证"
+    - "token"
+    - "401"
+    - "api call"
+    - "api raw"
+    - "分享链接"
+    - "错误处理"
+    - "安全规则"
+  readOnly: true
+  relatedSkills: []
 ---
 
 # zsxq-cli 共享规则
 
 本技能指导你如何通过 zsxq-cli 操作知识星球资源，以及有哪些注意事项。
+
+## 快速定位
+
+> 首次使用或不确定该用哪个 skill 时，先查本索引和 frontmatter 元数据，无需完整阅读每个 skill 正文。
+
+- 顶层操作索引：[`SKILL-INDEX.md`](../SKILL-INDEX.md) 按「操作意图 → skill → reference」列出所有命令。
+- 每个 `SKILL.md` 的 YAML frontmatter 包含：
+  - `metadata.operations`: 该 skill 支持的操作标识符列表
+  - `metadata.keywords`: 触发关键词
+  - `metadata.readOnly`: `true` 表示只读，`false` 表示包含写入/删除
+  - `metadata.relatedSkills`: 相关 skill 名称
+
+AI 工具可通过扫描 frontmatter + 索引表快速命中目标 skill，只在需要具体命令细节时才深入 reference 文档。
 
 ## 索引
 

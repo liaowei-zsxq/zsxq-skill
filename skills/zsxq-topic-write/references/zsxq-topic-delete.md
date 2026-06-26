@@ -49,6 +49,6 @@ zsxq-cli api raw --method DELETE --path /v2/topics/15522482218442
 ## 参考
 
 - [zsxq-topic-edit](zsxq-topic-edit.md) — 删除前若只是想改内容，优先考虑编辑
-- [zsxq-topic-detail](zsxq-topic-detail.md) — 删除前确认主题内容
-- [zsxq-topic-search](zsxq-topic-search.md) — 搜索主题获取 topic_id
+- [zsxq-topic-detail](../../zsxq-topic-read/references/zsxq-topic-detail.md) — 删除前确认主题内容
+- [zsxq-topic-search](../../zsxq-topic-read/references/zsxq-topic-search.md) — 搜索主题获取 topic_id
 - [zsxq-shared](../../zsxq-shared/SKILL.md)

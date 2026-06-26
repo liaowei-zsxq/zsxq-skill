@@ -1,14 +1,35 @@
 ---
-name: zsxq-topic
-version: 1.3.1
-description: "知识星球主题管理：搜索主题、查看主题详情、发布帖子、编辑主题、发表评论、回复某条评论（楼中楼）、回答提问、删除主题；通过 api call 查看主题评论列表、设置精华、设置标签、查看自己提的问题与已回答记录。当用户需要查找内容、发帖、编辑主题、评论、回复评论、回答问题、删除主题、查看主题评论、查看自己的提问记录、或管理主题精华和标签时使用。"
+name: zsxq-topic-read
+version: 1.4.0
+description: "知识星球主题读查：搜索主题、查看详情、获取评论、查看自己/他人提问记录。当用户需要查找/查看主题、获取 topic_id、看评论或提问记录时使用。"
 metadata:
   requires:
     bins: ["zsxq-cli"]
   cliHelp: "zsxq-cli topic --help"
+  operations:
+    - "+search"
+    - "+detail"
+    - "get_topic_comments"
+    - "get_self_question_topics"
+    - "get_self_answer_topics"
+  keywords:
+    - "主题"
+    - "topic_id"
+    - "搜索"
+    - "详情"
+    - "评论"
+    - "提问"
+    - "精华"
+    - "标签"
+  readOnly: true
+  relatedSkills:
+    - "zsxq-shared"
+    - "zsxq-group"
+    - "zsxq-topic-write"
+    - "zsxq-topic-interact"
 ---
 
-# topic
+# topic-read
 
 > 首次使用或遇到认证错误（401 / token 过期 / `not logged in`）时，先读 [`../zsxq-shared/SKILL.md`](../zsxq-shared/SKILL.md) 了解登录与 API 调用约定。日常调用已登录账户时无需每次重读。
 
@@ -35,31 +56,22 @@ Group (group_id)
 
 ## Shortcuts（推荐优先使用）
 
-Shortcut 是对常用操作的高级封装（`zsxq-cli topic +<verb> [flags]`）。有 Shortcut 的操作优先使用。
-
 | Shortcut | 说明 |
 |----------|------|
 | [`+search`](references/zsxq-topic-search.md) | 在星球内全文搜索主题，返回 topic_id / 类型 / 标题 / 时间表格 |
 | [`+detail`](references/zsxq-topic-detail.md) | 获取单条主题的完整详情（内容、评论数、点赞数、标签等） |
-| [`+create`](references/zsxq-topic-create.md) | 在指定星球发布新主题（仅支持 talk 类型），需确认内容后执行 |
-| [`+edit`](references/zsxq-topic-edit.md) | 编辑自己发布的主题（正文、附件），需确认内容后执行 |
-| [`+reply`](references/zsxq-topic-reply.md) | 对主题发表评论，支持楼中楼回复，需确认内容后执行 |
-| [`+answer`](references/zsxq-topic-answer.md) | 对提问类主题（q&a）发布官方回答，需确认内容后执行 |
 
 ## API（通过 `zsxq-cli api call` 直接调用）
 
-Shortcut 未覆盖的高级操作：
+Shortcut 未覆盖的只读操作：
 
 | 工具 | 参数 | 说明 |
 |------|------|------|
 | `get_topic_comments` | `topic_id`, `limit`, `index` | 获取主题评论列表（分页） |
-| `set_topic_digested` | `topic_id`, `digested` | 设置/取消精华（星主权限） |
-| `set_topic_tags` | `topic_id`, `titles` | 为主题设置标签（标签名数组） |
 | `get_self_question_topics` | `topic_filter`, `count`, `end_time` | 查看自己发起的提问（`unanswered`/`answered`） |
 | `get_self_answer_topics` | `topic_filter`, `count`, `end_time` | 查看别人向我发起的提问（`unanswered`/`answered`） |
 
-## 原始 HTTP 调用（`zsxq-cli api raw`）
+## 相关操作
 
-| 操作 | 命令模板 | 说明 |
-|------|----------|------|
-| [删除主题](references/zsxq-topic-delete.md) | `api raw --method DELETE --path /v2/topics/<topic_id>` | 删除主题，不可恢复 |
+- 创建、编辑、删除主题，以及设置精华/标签：见 [zsxq-topic-write](../zsxq-topic-write/SKILL.md)。
+- 发表评论、回答提问：见 [zsxq-topic-interact](../zsxq-topic-interact/SKILL.md)。

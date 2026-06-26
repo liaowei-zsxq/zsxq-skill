@@ -52,5 +52,5 @@ zsxq-cli api call get_hashtag_topics \
 ## 参考
 
 - [zsxq-group-topics](zsxq-group-topics.md) — 浏览星球全部主题
-- [zsxq-topic-search](../../zsxq-topic/references/zsxq-topic-search.md) — 关键词搜索主题
+- [zsxq-topic-search](../../zsxq-topic-read/references/zsxq-topic-search.md) — 关键词搜索主题
 - [zsxq-shared](../../zsxq-shared/SKILL.md)

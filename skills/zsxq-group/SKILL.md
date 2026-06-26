@@ -1,11 +1,30 @@
 ---
 name: zsxq-group
-version: 1.3.2
-description: "知识星球（星球）管理：列出星球、浏览主题、查询标签、搜索成员。当用户需要查看自己加入或创建的星球、浏览星球内容、获取 group_id、查询星球标签或成员时使用。"
+version: 1.4.0
+description: "知识星球星球管理：列出星球、浏览主题、查询标签、搜索成员。当用户需要 group_id、查看星球列表、浏览星球内容、查标签或成员时使用。"
 metadata:
   requires:
     bins: ["zsxq-cli"]
   cliHelp: "zsxq-cli group --help"
+  operations:
+    - "+list"
+    - "+topics"
+    - "+hashtags"
+    - "search_groups"
+    - "search_group_members"
+    - "get_hashtag_topics"
+  keywords:
+    - "星球"
+    - "group_id"
+    - "列出星球"
+    - "浏览主题"
+    - "标签"
+    - "成员"
+  readOnly: true
+  relatedSkills:
+    - "zsxq-shared"
+    - "zsxq-topic-read"
+    - "zsxq-user"
 ---
 
 # group
@@ -55,7 +74,7 @@ Shortcut 未覆盖的高级操作：
 
 | ❌ 不要做 | ✅ 应该做 |
 |----------|----------|
-| 按关键词找内容时用 `+topics` 翻页逐条人工筛选 | 用 [zsxq-topic](../zsxq-topic/SKILL.md) 的 `+search` 全文搜索 |
+| 按关键词找内容时用 `+topics` 翻页逐条人工筛选 | 用 [zsxq-topic-read](../zsxq-topic-read/SKILL.md) 的 `+search` 全文搜索 |
 | 查「自己最近发过什么」时逐个星球跑 `+topics` | 用 [zsxq-user](../zsxq-user/SKILL.md) 的 `+footprints` 一次拿到跨星球足迹 |
 | 用户只给星球名称时，让用户自己提供 group_id 或凭记忆猜 ID | 先 `group +list`（自己加入的）或 `search_groups`（公开搜索）查到 ID 再继续 |
 | 名称命中多个相似星球时默认取第一个 | 列出候选（group_id + 名称）让用户确认 |

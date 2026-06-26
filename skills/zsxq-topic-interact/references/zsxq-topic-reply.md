@@ -89,6 +89,6 @@ zsxq-cli topic +reply --topic-id 111222333444 --text "回复内容" --reply-to 2
 
 ## 参考
 
-- [zsxq-topic-detail](zsxq-topic-detail.md) — 查看主题详情（获取 topic_id）
+- [zsxq-topic-detail](../../zsxq-topic-read/references/zsxq-topic-detail.md) — 查看主题详情（获取 topic_id）
 - [zsxq-topic-answer](zsxq-topic-answer.md) — 回答提问类主题（q&a 专用）
 - [zsxq-shared](../../zsxq-shared/SKILL.md)

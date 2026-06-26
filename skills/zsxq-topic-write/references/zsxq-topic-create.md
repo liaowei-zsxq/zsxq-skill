@@ -72,6 +72,6 @@ zsxq-cli topic +detail --topic-id <新建的 topic_id>
 
 ## 参考
 
-- [zsxq-topic-reply](zsxq-topic-reply.md) — 对已发主题评论
+- [zsxq-topic-reply](../../zsxq-topic-interact/references/zsxq-topic-reply.md) — 对已发主题评论
 - [zsxq-group-list](../../zsxq-group/references/zsxq-group-list.md) — 获取 group_id
 - [zsxq-shared](../../zsxq-shared/SKILL.md)
